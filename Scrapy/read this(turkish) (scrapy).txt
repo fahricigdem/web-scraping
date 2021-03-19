@@ -1,0 +1,30 @@
+Masaüstünde(biryerde) klasör olustur
+Anakonda navigatör'de Environment'a gir ve 
+Olusturdurdugun ortamlardan istedigin birini secerek Open Terminal de(siyah cmd penceresi aciliyor)
+
+Terminalde cd Desktop sonrada cd Olusturulan Klasör yaz enterla
+oraya pip3 install scrapy de, dosyalar insin.(scrapy inmis oluyor)
+Yine Terminalde(cmd penceresinde) ayni klasorde bir proje olustur: scrapy startproject myProje
+Masaüstünde(biryerde) olusturdugun klasore bak olusmus mu kontrol et
+
+Simdi spider olusturulacak: web sayfalarindan veri ceken mekanizma
+once terminalde projenin icine cd ile gir yani: cd myProje yaz enterla
+proje olustururken terminalde bir internet sayfasi ornegi gorunmustu mesela scrapy genspider example.com gibi
+sen de: scrapy genspider (spider adimiz) (incelenen web sitesi linki) yaz enterla
+created spider diye gorunur terminalde
+Simdi VS(visual code)'a girilir anaconda'dan ve orada olusturulan proje klasorune girilir, icerisinde bazi python dosyalari gorulebilir,
+Orada spider icinde olusturulan spider'imiz gorunur, orada calisilacak, diger py dosyalarinda pek isimiz yok.
+
+Ancak spiderimiz icinde url'de http https olarak degistirilir ve en sondaki / silinir, allowed domains de kisaltilabilir
+
+
+Bilgi cekmek istedigimiz sitede ornegin groupon, https://www.groupon.com/robots.txt sayfasina bakilarak hangi bilgilerin cekilebilecegi gorulmelidir.
+Bilgi cekmek istedigimiz sitede yapmamiz fereken bir diger kontrol java script'in disable edilmesi durumunda aradigimiz verilere ulasabilme durumumuz: bunu inspect/untersuchen ile element sekmesinde control schift p ile acilan field'da jav yazinca cikiyor, disable deyip iteyi yenileyince sayfanin yine acilmasi gerekiyor. Bazi siteler java script olmadan acilmiyor. Dolayisiyla bu da kontrol edilmeloidir.
+
+spider icinde kod yazmadan once bilgileri alip alamadigimizi asagida terminalde kontrol etmek icin terminale:scrapy shell https://www.groupon.com/landing/deal-of-the-day(site linki) yazilir
+
+spider icinde kod yazildiktan sonra asagida terminale :scrapy crawl deals, yaziliyor
+
+scrapy crawl deals -o data.json     : boylece veriler bir json dosyasina kaydedilir.
+
+
